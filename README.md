@@ -1,2 +1,2 @@
-# Animal-Disease-Traceability
-Thesis
+# Animal-Disease-Traceability UI/UX PROTOTYPE
+Thesis 1
