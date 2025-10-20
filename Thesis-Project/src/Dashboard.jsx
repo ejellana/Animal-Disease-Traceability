@@ -118,12 +118,18 @@ export default function Dashboard() {
         <h1 className="text-4xl font-bold text-green-700 text-center mb-12 tracking-tight">
           Dashboard Overview
         </h1>
+        <p className="text-lg text-gray-600 text-center mb-12 leading-relaxed max-w-3xl mx-auto">
+          Welcome to the centralized hub for monitoring and managing animal disease traceability. This dashboard provides real-time insights and tools to ensure the health and safety of livestock across Santa Rosa City Laguna.
+        </p>
 
         {/* SECTION 1: Animal Movement and Health Status */}
         <section className="py-8 w-full">
           <h2 className="text-3xl font-semibold text-green-700 mb-8 text-center">
             Animal Movement and Health Status
           </h2>
+          <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed max-w-3xl mx-auto">
+            Track the movement of animals and monitor their health status with interactive charts and detailed tables. Stay informed about population trends and health conditions to prevent disease outbreaks.
+          </p>
 
           {/* Grid: cards will be wide because parent container is wide */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -194,6 +200,9 @@ export default function Dashboard() {
           <h2 className="text-3xl font-semibold text-green-700 mb-8 text-center">
             Outbreak Statistics & Summary Reports
           </h2>
+          <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed max-w-3xl mx-auto">
+            Analyze outbreak data and generate comprehensive reports to support disease prevention and response strategies. Access visual insights and downloadable summaries for informed decision-making.
+          </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div

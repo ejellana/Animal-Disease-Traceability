@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Dashboard from "./Dashboard"; // Adjusted for Pages folder outside src
+import Dashboard from "./Dashboard";
+import Login from "./login";
+import AdminLogin from "./AdminLogin"; // 👈 add this
 
 export default function App() {
   return (
@@ -8,12 +10,20 @@ export default function App() {
         {/* HEADER */}
         <header className="bg-[var(--green)] text-[var(--white)] w-full shadow-lg fixed top-0 left-0 z-50">
           <div className="w-full px-6 lg:px-12 py-4 flex justify-between items-center">
-            <h1 className="text-3xl font-bold tracking-wide">Animal Disease Traceability</h1>
+            <h1 className="text-3xl font-bold tracking-wide">
+              Animal Disease Traceability
+            </h1>
             <nav className="flex space-x-6 text-lg">
-              <Link to="/" className="hover:text-[var(--light-green)] transition-all duration-200">
+              <Link
+                to="/"
+                className="hover:text-[var(--light-green)] transition-all duration-200"
+              >
                 Home
               </Link>
-              <Link to="/dashboard" className="hover:text-[var(--light-green)] transition-all duration-200">
+              <Link
+                to="/login"
+                className="hover:text-[var(--light-green)] transition-all duration-200"
+              >
                 Login
               </Link>
             </nav>
@@ -31,31 +41,33 @@ export default function App() {
                     Secure Animal Disease Tracking with Blockchain
                   </h2>
                   <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                    A Hyperledger Fabric-based framework ensuring real-time, transparent, and tamper-proof
-                    traceability in the food supply chain. Enhance biosecurity, protect consumers, and
-                    maintain industry trust.
+                    A website where you can explore an animal database, track livestock movements, and view
+                    statistics on food safety and disease trends. Designed specifically for Santa Rosa,
+                    Laguna, this platform provides real-time insights into local livestock health and
+                    supports farmers with actionable data. Enhance your understanding of regional food
+                    supply chains and contribute to a safer community with our comprehensive tracking tools.
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                     <Link to="/dashboard">
                       <button className="bg-[var(--green)] text-[var(--white)] px-8 py-3 rounded-xl shadow-lg hover:bg-[var(--light-green)] hover:text-[var(--green)] transition-all duration-300 font-semibold">
-                        Get Started
+                        See Dashboards
                       </button>
                     </Link>
-                    <button className="border-2 border-[var(--green)] text-[var(--green)] px-8 py-3 rounded-xl hover:bg-[var(--light-green)] transition-all duration-300 font-semibold">
-                      Learn More
-                    </button>
                   </div>
                 </div>
               }
             />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/adminlogin" element={<AdminLogin />} /> {/* 👈 add this */}
           </Routes>
         </main>
 
         {/* FOOTER */}
         <footer className="bg-[var(--green)] text-[var(--white)] text-center py-6 w-full mt-auto">
           <p className="text-sm">
-            &copy; 2025 Santa Rosa City Laguna Animal Disease Traceability. All rights reserved.
+            &copy; 2025 Santa Rosa City Laguna Animal Disease Traceability. All
+            rights reserved.
           </p>
         </footer>
       </div>
